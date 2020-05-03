@@ -4,6 +4,6 @@ namespace Messages
 {
     public interface IOrderAccepted
     {
-        IList<IProduct> Products { get; }
+        IList<Product> Products { get; }
     }
 }

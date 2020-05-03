@@ -1,9 +1,9 @@
-﻿using System.Collections.Generic;
-
-namespace Messages
+﻿namespace Messages
 {
+    using System.Collections.Generic;
+
     public class OrderRequested
     {
-        public IList<IProduct> Products { get; set; }
+        public List<Product> Products { get; set; }
     }
 }
