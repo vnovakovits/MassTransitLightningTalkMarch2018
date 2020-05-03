@@ -6,9 +6,9 @@ using Messages;
 
 namespace Shop
 {
-    public class OrderRequestedFaultConsumer : IConsumer<Fault<IOrderRequested>>
+    public class OrderRequestedFaultConsumer : IConsumer<Fault<OrderRequested>>
     {
-        public Task Consume(ConsumeContext<Fault<IOrderRequested>> context)
+        public Task Consume(ConsumeContext<Fault<OrderRequested>> context)
         {
             Console.ForegroundColor = ConsoleColor.Red;
             Console.WriteLine("The following order was not processed:");

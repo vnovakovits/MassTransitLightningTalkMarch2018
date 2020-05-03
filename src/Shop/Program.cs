@@ -51,9 +51,10 @@ namespace Shop
 
                 if (consoleKeyInfo.Key == ConsoleKey.E)
                 {
-                    bus.Publish<IOrderRequested>(new
+                    bus.Publish<OrderRequested>(new
                     {
-                        Products = products.Select(product => new {Name = product.name, Price = product.price}).ToList()
+                        Products = products.Select(product => new {Name = product.name, Price = product.price}).ToList(),
+                        Name = "yolo"
                     });
 
                     Console.WriteLine("Submitted Order");
