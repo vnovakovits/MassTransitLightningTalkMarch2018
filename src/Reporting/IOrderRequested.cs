@@ -1,8 +1,8 @@
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 
 namespace Messages
 {
-    public interface IOrderAccepted
+    public interface IOrderRequested
     {
         IList<IProduct> Products { get; }
     }

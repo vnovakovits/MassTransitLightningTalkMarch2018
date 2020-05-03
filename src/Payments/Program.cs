@@ -1,12 +1,11 @@
 ﻿using System;
-using System.Linq;
 using MassTransit;
 
 namespace Payments
 {
     class Program
     {
-        static void Main(string[] args)
+        static void Main()
         {
             var bus = Bus.Factory.CreateUsingRabbitMq(sbc =>
             {
@@ -23,10 +22,12 @@ namespace Payments
             });
 
             bus.Start();
-            
+
             Console.WriteLine("Welcome to Payments");
             Console.WriteLine("Press Q key to exit");
-            while (Console.ReadKey(true).Key != ConsoleKey.Q) ;
+            while (Console.ReadKey(true).Key != ConsoleKey.Q)
+            {
+            }
 
             bus.Stop();
         }

@@ -11,7 +11,7 @@ namespace Payments
         {
             if (TakePayment(context.Message))
             {
-                await context.Publish<IOrderAccepted>(new {context.Message.Products});
+                await context.Publish<IOrderAccepted>(new { context.Message.Products });
             }
             else
             {
@@ -24,8 +24,8 @@ namespace Payments
             // 1 in 10 payments fail
             var paymentFailed = Random.Next(1, 10) == 1;
 
-            if(paymentFailed) Console.WriteLine("Payment Failed");
-            if(!paymentFailed) Console.WriteLine("Payment Successful");
+            if (paymentFailed) Console.WriteLine("Payment Failed");
+            if (!paymentFailed) Console.WriteLine("Payment Successful");
 
             return !paymentFailed;
         }

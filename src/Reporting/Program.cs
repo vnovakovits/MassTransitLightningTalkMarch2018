@@ -25,7 +25,7 @@ namespace Reporting
             });
 
             bus.Start();
-            
+
             Console.WriteLine("Welcome to Reports");
             Console.WriteLine("Press Q key to exit");
             Console.WriteLine("Press R key to show report");
@@ -38,7 +38,7 @@ namespace Reporting
                 {
                     Console.WriteLine("-- Product Sales --");
                     Console.WriteLine(string.Join(Environment.NewLine, reportStore.ProductSales.Select(x => $"{x.Key}: {x.Value:C}")));
-                    
+
                     Console.WriteLine("-- Totals --");
                     Console.WriteLine($"TotalOrdersRequested: {reportStore.TotalOrdersRequested:C}");
                     Console.WriteLine($"TotalOrdersAccepted: {reportStore.TotalOrdersAccepted:C}");
